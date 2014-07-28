@@ -74,6 +74,7 @@ avgDatasetNames <- names(avgDataset)
 for (i in 3:ncol(avgDataset)) {
     avgDatasetNames[i] <- paste('Avg', avgDatasetNames[i], sep='')
 }
+names(avgDataset) <- avgDatasetNames
 
 # save result
 write.table(avgDataset, file='average_dataset.txt')
